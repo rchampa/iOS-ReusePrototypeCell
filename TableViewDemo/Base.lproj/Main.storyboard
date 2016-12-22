@@ -128,6 +128,38 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nNz-TR-BCT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Ufh-sq-fhp" customClass="CustomTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ufh-sq-fhp" id="RDG-bJ-MO6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O5J-fx-Ynl">
+                                                    <rect key="frame" x="19" y="11" width="345" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odO-no-7AC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="O5J-fx-Ynl" firstAttribute="top" secondItem="RDG-bJ-MO6" secondAttribute="top" constant="11" id="CFZ-Fs-QKW"/>
+                                                <constraint firstItem="O5J-fx-Ynl" firstAttribute="leading" secondItem="RDG-bJ-MO6" secondAttribute="leading" constant="19" id="Kfp-UX-TV9"/>
+                                                <constraint firstAttribute="trailing" secondItem="O5J-fx-Ynl" secondAttribute="trailing" constant="11" id="Xrv-Xp-w1C"/>
+                                                <constraint firstAttribute="bottom" secondItem="O5J-fx-Ynl" secondAttribute="bottom" constant="11" id="gVL-1z-uAH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="odO-no-7AC" id="KDS-XG-Nkw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
